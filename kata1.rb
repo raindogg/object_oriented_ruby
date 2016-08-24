@@ -1,12 +1,13 @@
 input = File.open("weather.dat") 
 array = []
 input.each { |line| array << line.split }
-
+p array
+puts "********************************"
 smaller = []
 array.each do |line|
   smaller << line.slice!(0, 3)
 end
-
+p smaller
 smaller.slice!(0, 2)
 
 smallest_range = 100
